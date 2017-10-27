@@ -27,16 +27,15 @@ public class Flipkart
 		
 		//HOVER
 		WebElement element1 = dr.findElement(By.xpath("//*[@id=\"container\"]/div/header/div[2]/div/ul/li[7]/a"));
-        Actions ac = new Actions(dr);
-        ac.moveToElement(element1).click().build().perform();
-        dr.findElement(By.xpath("//*[@id=\"container\"]/div/header/div[2]/div/ul/li[7]/a")).click();
+        	Actions ac = new Actions(dr);
+        	ac.moveToElement(element1).click().build().perform();
         
-        WebElement element2 = dr.findElement(By.xpath("//*[@id=\"container\"]/div/header/div[2]/div/ul/li[7]/ul/li/ul/li[5]/ul/li[4]/a"));
-        Actions ac1 = new Actions(dr);
-        ac1.moveToElement(element2).click().build().perform();
+        	WebElement element2 = dr.findElement(By.xpath("//*[@id=\"container\"]/div/header/div[2]/div/ul/li[7]/ul/li/ul/li[5]/ul/li[4]/a"));
+        	Actions ac1 = new Actions(dr);
+        	ac1.moveToElement(element2).click().build().perform();
         
-        //Scroll
-        WebElement lang = dr.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/section/div[1]/label/div[2]/div"));
+        	//Scroll
+        	WebElement lang = dr.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/section/div[1]/label/div[2]/div"));
 		((JavascriptExecutor)dr).executeScript("arguments[0].scrollIntoView();", lang);
 		
 		Thread.sleep(2000);
