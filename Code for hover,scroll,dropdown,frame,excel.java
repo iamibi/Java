@@ -13,8 +13,11 @@
 		((JavascriptExecutor)dr).executeScript("arguments[0].scrollIntoView();", lang);
 		
 //Frame
-		dr.switchTo().frame("a077aa5e");
-		dr.findElement(By.xpath("html/body/a/img")).click();
+		dr.switchTo().frame("iframe1");
+		dr.findElement(By.name("firstname")).sendKeys("Ibrahim");
+		dr.switchTo().parentFrame();
+		dr.switchTo().frame("iframe2");
+		dr.findElement(By.xpath("//*[@id=\"post-9\"]/div/div[1]/div/p[1]/a/img")).click();
 		
 //Excel
 		FileInputStream fs = new FileInputStream("C:\\Users\\1354518\\Desktop\\Work\\mysheet.xls");
