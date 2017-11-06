@@ -18,6 +18,10 @@
 		dr.switchTo().parentFrame();
 		dr.switchTo().frame("iframe2");
 		dr.findElement(By.xpath("//*[@id=\"post-9\"]/div/div[1]/div/p[1]/a/img")).click();
+
+//Screenshot
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("C:\\selenium\\error.png"));
 		
 //Excel
 		FileInputStream fs = new FileInputStream("C:\\Users\\1354518\\Desktop\\Work\\mysheet.xls");
